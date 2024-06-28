@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Email {
-    private String firstName;
+    private final String firstName;
     private String lastName;
     private String password;
     private String department;
@@ -14,19 +14,16 @@ public class Email {
     public Email(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("Your Name: " +this.firstName + " " + this.lastName);
 
         // Calling method asking for department
         this.department = setDepartment();
-        System.out.println("Department: " + this.department);
 
         // Calling method for password
         this.password = generatePassword(8);
-        System.out.println("Your password: " + this.password);
 
         // Setting up the email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
-        System.out.println("Your Email: " + this.email);
+
     }
     // Ask Department
     private String setDepartment(){
@@ -75,7 +72,8 @@ public class Email {
 
     // Show info
     public String showInfo(){
-        return "Display Name: " + this.firstName+
+        return "Employee Infomations-->" +
+                "\nDisplay Name: " + this.firstName+
                 "\nE-mail: " + this.email +
                 "\nPassword: " + this.password +
                 "\nDepartment: " + this.department;
