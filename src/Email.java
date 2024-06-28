@@ -72,4 +72,12 @@ public class Email {
     }
     public String setAlternateEmail(){return alternativeEmail;}
     public String setPassword(){return password;}
+
+    // Show info
+    public String showInfo(){
+        return "Display Name: " + this.firstName+
+                "\nE-mail: " + this.email +
+                "\nPassword: " + this.password +
+                "\nDepartment: " + this.department;
+    }
 }
